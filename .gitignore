@@ -1,0 +1,20 @@
+
+---
+
+### 📄 `.gitignore`
+
+```gitignore
+# Ignore compiled class files
+*.class
+
+# IDE-specific files
+*.iml
+.idea/
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*~
