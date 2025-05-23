@@ -7,7 +7,7 @@ A simple multiplayer Bingo game built using Java's socket programming.
 ## 📦 Features
 
 - Server handles multiple clients
-- Game starts only when all clients type `ready`
+- Game starts only when all clients type `ready` or press Enter
 - Server broadcasts random Bingo numbers (1–75)
 - First client to type `BINGO` wins the round
 - Server announces the winner and resets for the next round
@@ -24,6 +24,19 @@ A simple multiplayer Bingo game built using Java's socket programming.
 ```bash
 javac BingoServer.java BingoClient.java BingoCard.java
 ```
+
+### 2. Run Server
+
+```bash
+java BingoServer
+```
+
+### 3. Run Clients (in separate terminals)
+
+```bash
+java BingoClient
+```
+You can run multiple clients on the same computer (localhost) for testing.
 
 ## 🎮 Game Flow
 
