@@ -64,4 +64,12 @@ public class BingoCard {
             System.out.println();
         }
     }
+        // --- Getters for GUI ---
+    public int[][] getCardNumbers() {
+        return card;
+    }
+
+    public boolean[][] getMarkedStatus() {
+        return marked;
+    }
 }
