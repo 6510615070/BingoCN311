@@ -22,7 +22,7 @@ A simple multiplayer Bingo game built using Java's socket programming.
 ### 1. Compile
 
 ```bash
-javac BingoServer.java BingoClient.java BingoCard.java
+javac BingoServer.java BingoClient.java BingoCard.java BingoGUI.java
 ```
 
 ### 2. Run Server
