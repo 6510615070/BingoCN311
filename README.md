@@ -37,6 +37,12 @@ java BingoServer
 java BingoClient
 ```
 You can run multiple clients on the same computer (localhost) for testing.
+### 4. Run Clients (with GUI)
+If you would like to play the game with GUI, run this command instead:
+
+```bash
+java BingoGUI
+```
 
 ## 🎮 Game Flow
 
