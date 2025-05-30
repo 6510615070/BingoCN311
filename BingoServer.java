@@ -13,7 +13,7 @@ public class BingoServer {
 
     public static void main(String[] args) throws IOException {
         ServerSocket serverSocket = new ServerSocket(PORT);
-        System.out.println("🟢 Bingo Server started on port " + PORT);
+        System.out.println("Bingo Server started on port " + PORT);
 
         while (true) {
             Socket clientSocket = serverSocket.accept();
@@ -37,16 +37,16 @@ public class BingoServer {
         drawnNumbers.clear();
 
         new Thread(() -> {
-            System.out.println("🎮 All players ready. Game started!");
+            System.out.println("All players ready. Game started!");
             broadcast("GAME_START");
 
             try {
-                while (!stopGame && drawnNumbers.size() < 75) {
+                while (!stopGame && drawnNumbers.size() < 25) {
                     Thread.sleep(3000);
 
                     int number;
                     do {
-                        number = random.nextInt(75) + 1;
+                        number = random.nextInt(25) + 1;
                     } while (drawnNumbers.contains(number));
                     drawnNumbers.add(number);
 
@@ -55,7 +55,7 @@ public class BingoServer {
                 }
 
                 if (stopGame) {
-                    System.out.println("🛑 Game stopped due to a BINGO winner.");
+                    System.out.println("Game stopped due to a BINGO winner.");
                 }
 
                 // Clean up for next round

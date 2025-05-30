@@ -16,7 +16,7 @@ public class BingoCard {
             for (int j = 0; j < SIZE; j++) {
                 int num;
                 do {
-                    num = rand.nextInt(75) + 1;
+                    num = rand.nextInt(25) + 1;
                 } while (used.contains(num));
                 used.add(num);
                 card[i][j] = num;

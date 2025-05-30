@@ -31,7 +31,7 @@ public class BingoClient {
 
                 while ((line = in.readLine()) != null) {
                     if (line.startsWith("GAME_START")) {
-                        System.out.println("🎯 Game started!");
+                        System.out.println("Game started!");
                         gameStarted = true;
                         card.printCard();
                     } else if (line.startsWith("NUMBER:") && gameStarted) {
@@ -41,7 +41,7 @@ public class BingoClient {
                         card.printCard();
 
                         if (card.checkBingo()) {
-                            System.out.println("🎉 You got BINGO! 🎉");
+                            System.out.println("You got BINGO!!!");
                             out.println("BINGO");
                         }
 

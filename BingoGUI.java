@@ -216,7 +216,7 @@ public class BingoGUI implements ActionListener {
                 SwingUtilities.invokeLater(() -> { // All GUI updates must be on the Event Dispatch Thread
                     if (finalMessage.startsWith("GAME_START")) {
                         initializeCardGUI(); // Populate the card display now that game is starting
-                        calledNumberLabel.setText("🎯 Game Started! Good Luck, " + playerName + "!");
+                        calledNumberLabel.setText("Game Started! Good Luck, " + playerName + "!");
                         bingoStatusLabel.setText(" "); // Clear previous status
                     } else if (finalMessage.startsWith("NUMBER:")) {
                         if (bingoCard == null) { // Should have been created and GUI initialized
@@ -230,7 +230,7 @@ public class BingoGUI implements ActionListener {
                             updateCardGUI(); // Visually mark the number
 
                             if (bingoCard.checkBingo()) {
-                                bingoStatusLabel.setText("🎉 BINGO! 🎉");
+                                bingoStatusLabel.setText("BINGO!!!");
                                 bingoStatusLabel.setForeground(Color.ORANGE);
                                 out.println("BINGO"); // Announce BINGO to server
                                 // Client will wait for server's WINNER message to confirm.
@@ -240,7 +240,7 @@ public class BingoGUI implements ActionListener {
                         }
                     } else if (finalMessage.startsWith("WINNER:")) {
                         String winnerName = finalMessage.split(":")[1];
-                        calledNumberLabel.setText("🏆 Game Over! 🏆");
+                        calledNumberLabel.setText("Game Over!");
                         if (winnerName.equals(playerName) && bingoCard.checkBingo()) {
                             bingoStatusLabel.setText("You are the WINNER! Congratulations!");
                             bingoStatusLabel.setForeground(Color.MAGENTA);
