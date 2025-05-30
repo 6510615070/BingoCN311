@@ -41,12 +41,12 @@ public class BingoServer {
             broadcast("GAME_START");
 
             try {
-                while (!stopGame && drawnNumbers.size() < 25) {
+                while (!stopGame && drawnNumbers.size() < 75) {
                     Thread.sleep(3000);
 
                     int number;
                     do {
-                        number = random.nextInt(25) + 1;
+                        number = random.nextInt(75) + 1;
                     } while (drawnNumbers.contains(number));
                     drawnNumbers.add(number);
 
